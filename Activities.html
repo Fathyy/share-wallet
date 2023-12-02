@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <style>
+        /* common styles */
+        *, *::before, ::after{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --green: #50C878;
+        }
+        ul{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            display: inline-block;
+        }
+        .container{
+            max-width: 1100px;
+            width: 80%;
+            margin: 0 auto;
+        }
+        img{
+            max-width: 100%;
+        }
+        .section-margin{
+            margin: 5rem 0;
+        }
+
+        /* common styles */
+        .logo-nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 0;
+        }
+        .nav-group{
+            display: flex;
+            align-items: center;
+        }
+        .nav-group li{
+            padding-right: 1rem;
+        }
+        .register{
+            background: yellow;
+            padding: 10px 15px;
+            border-radius: 20px;
+            margin-right: 1rem;
+        }
+        .nav-group li a{
+            font-size: 20px;
+            color: #000;
+        }
+        .logo p{
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        /* footer section */
+        .footer-section{
+            background-color: var(--green);
+            padding: 3rem 0;
+            color: #fff;
+            font-size: 18px;
+        }
+        .footer-wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+        .Project-name{
+            align-self: center;
+        }
+        .footer-heading{
+            font-size: 25px;
+            color: yellow;
+            font-weight: 600;
+        }
+        .footer-items li, .footer-heading{
+            margin-bottom: 1rem;
+        }
+
+        /* main section */
+        .sign-in{
+            background-color: #0E4C92;
+            padding: 3rem 0;
+        }
+        .form-div{
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .intro{
+            margin-bottom: 1rem;
+        }
+        .intro h1{
+            font-size: 40px;
+            margin-bottom: 0.5rem;
+        }
+        .intro p{
+            font-size: 18px;
+            margin-bottom: 0.5rem;
+        }
+        form h3{
+            font-size: 22px;
+            margin-bottom: 1rem;
+        }
+        .trip{
+            width: 70%;
+        }
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+        .form-heading{
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 3rem;
+        }
+        input, button{
+            font-size: 17px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .form-group input{
+            padding: 1rem 1.25rem;
+        }
+        .form-group label{
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            font-size: 18px;
+        }
+        .one-font{
+            font-size: 20px;
+            margin-bottom: 1rem;
+        }
+        .image-bg{
+            background-image: url(images/newTwo.png);
+            min-height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="logo-nav">
+                <div class="logo">
+                    <p>Share Wallet</p>
+                </div>
+    
+                <ul class="nav-group">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Activities.html">Activities</a></li>
+                    <li><a href="expenses.html">Expenses</a></li>       
+                    <li><a href="create-group.html">Create Group</a></li>
+                    <li class="register"><a href="signup.html">Register Now</a></li>
+                    <li><a href="signIn.html">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="sign-in">
+        <div class="container">
+            <div class="wrapper-div">
+                <div class="form-div">
+                    <div class="trip">
+                        <h3 class="form-heading">Trip</h3>
+                        <p class="one-font">Trip to Dubai</p>
+                        <p class="one-font">Maggie K created this Expense.</p>
+                        <p class="one-font">30th November</p>
+                        <p class="one-font">08.00 AM</p>
+                        <p class="one-font">300,000</p>
+                        <p class="one-font">Split Equally</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="image-bg">
+    </section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="">
+                    <h3 class="footer-heading">Links</h3>
+                    <ul class="footer-items">
+                        <li>About Us</li>
+                        <li>Services</li>
+                        <li>Projects</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+
+                <div class="Project-name">
+                    <p>Share Wallet</p>
+                </div>
+
+                <div class="contacts">
+                    <div>
+                        <h3 class="footer-heading">Contacts</h3>
+                    </div>
+                    <div>
+                        <ul class="footer-items">
+                            <li>email@gmail.com</li>
+                            <li>+25476535534</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* common styles */
+        *, *::before, ::after{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --green: #50C878;
+        }
+        ul{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            display: inline-block;
+        }
+        .container{
+            max-width: 1100px;
+            width: 80%;
+            margin: 0 auto;
+        }
+        img{
+            max-width: 100%;
+        }
+        .section-margin{
+            margin: 5rem 0;
+        }
+
+        /* common styles */
+        .logo-nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 0;
+        }
+        .nav-group{
+            display: flex;
+            align-items: center;
+        }
+        .nav-group li{
+            padding-right: 1rem;
+        }
+        .register{
+            background: yellow;
+            padding: 10px 15px;
+            border-radius: 20px;
+            margin-right: 1rem;
+        }
+        .nav-group li a{
+            font-size: 20px;
+            color: #000;
+        }
+        .logo p{
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        /* footer section */
+        .footer-section{
+            background-color: var(--green);
+            padding: 3rem 0;
+            color: #fff;
+            font-size: 18px;
+        }
+        .footer-wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+        .Project-name{
+            align-self: center;
+        }
+        .footer-heading{
+            font-size: 25px;
+            color: yellow;
+            font-weight: 600;
+        }
+        .footer-items li, .footer-heading{
+            margin-bottom: 1rem;
+        }
+
+        /* main section */
+        .sign-in{
+            background-color: var(--green);
+            padding: 3rem 0;
+        }
+        .wrapper{
+            display: flex;
+            align-items: baseline;
+            gap: 3rem;
+        }
+
+        .form-div{
+            color: #fff;
+            width: 45%;
+            align-self: flex-start;
+        }
+        .description-right{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 45%;
+        }
+        /* medium and small screens */
+        @media(max-width: 600px){
+            .wrapper{
+                flex-direction: column;
+            }
+            .form-div{
+                width: 100%;
+            }
+            .description-right{
+                width: 100%;
+            }
+        }
+        .intro{
+            margin-bottom: 1rem;
+        }
+        .intro h1{
+            font-size: 40px;
+            margin-bottom: 0.5rem;
+        }
+        .intro p{
+            font-size: 18px;
+            margin-bottom: 0.5rem;
+        }
+        form h3{
+            font-size: 22px;
+            margin-bottom: 1rem;
+        }
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+        input, button{
+            font-size: 17px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .form-group input{
+            padding: 1rem 1.25rem;
+        }
+        .form-group label{
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .login{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login button{
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        .brief-desc{
+            background-color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 0.25rem;
+            color: #000;
+        }
+        .why-join{
+            background-color: var(--green);
+            padding: 3rem 0;
+        }
+        .white-bg{
+            background-color: #fff;
+            padding: 2rem;
+        }
+        .wallet-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .white-bg h1{
+            margin: 2rem 0;
+            position: relative;
+            text-align: center;
+        }
+        .white-bg h1::after{
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            height: 3px;
+            background-color: #000;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.5s;
+        }
+        .content{
+            display: flex;
+            align-items: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+        }
+        .content h2{
+            width: 20%;
+        }
+        .content p{
+            width: 80%;
+            font-size: 18px;
+        }
+        /* newsletter */
+        .newsletter{
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+            gap: 2rem;
+            align-items: center;
+        }
+        .newsletter p{
+            font-size: 18px;
+        }
+        .tick-box{
+            width: 15px;
+            height: 15px;
+            background-color: #D3D3D3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="logo-nav">
+                <div class="logo">
+                    <p>Share Wallet</p>
+                </div>
+    
+                <ul class="nav-group">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Activities.html">Activities</a></li>
+                    <li><a href="Expenses.html">Expenses</a></li>                    <li><a href="create-group.html">Create Group</a></li>
+                    <li class="register"><a href="signup.html">Register Now</a></li>
+                    <li><a href="signIn.html">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="sign-in">
+        <div class="container">
+            <div class="wrapper">
+                <div class="form-div">
+                    <div class="intro">
+                        <h1>Welcome to Share Wallet</h1>
+                        <p>Transforming Group finances, One expense at a time</p>
+                    </div>
+                    <form>
+                        <h3>Log In</h3>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Email</label>
+                            <input type="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Password</label>
+                            <input type="password" placeholder="Your Password">
+                        </div>
+                        <div class="form-group login">
+                            <button type="submit">Login</button>
+                        </div>
+    
+                    </form>
+                </div>
+    
+                <div class="description-right">
+                    <div class="brief-desc">
+                        <h1>Your ultimate platform for seamless expense sharing</h1>
+                    <p>Turn group outings into hassle free experiences</p>
+                    </div>
+
+                    <div>
+                        <img src="images/newSeven.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="why-join section-margin">
+        <div class="container">
+            <div class="white-bg">
+                <div class="wallet-heading">
+                    <h1>Why join Share Wallet?</h1>
+                </div>
+                <div class="content">
+                    <h2>Effortless <br>Planning</h2>
+                    <p>Plan trips, lunch dates, or any group activity without the stress of managing expenses.</p>
+                </div>
+                <div class="content">
+                    <h2>Smart Bill <br>Splitting</h2>
+                    <p>Our platform calculates and divides expenses automatically, ensuring everyone pays their fair share.</p>
+                </div>
+                <div class="content">
+                    <h2>Clear <br> Balances</h2>
+                    <p>Easily track who has paid, who owes, and settle balances with confidence.</p>
+                </div>
+                <div class="content">
+                    <h2>Secure Transactions</h2>
+                    <p>Your financial information is secure with our robust encryption and authentication systems..</p>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <div class="tick-box"></div>
+                <p>Subscribe to our newsletter</p> 
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="">
+                    <h3 class="footer-heading">Links</h3>
+                    <ul class="footer-items">
+                        <li>About Us</li>
+                        <li>Services</li>
+                        <li>Projects</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+
+                <div class="Project-name">
+                    <p>Share Wallet</p>
+                </div>
+
+                <div class="contacts">
+                    <div>
+                        <h3 class="footer-heading">Contacts</h3>
+                    </div>
+                    <div>
+                        <ul class="footer-items">
+                            <li>email@gmail.com</li>
+                            <li>+25476535534</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

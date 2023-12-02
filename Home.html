@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* common styles */
+        *, *::before, ::after{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --green: #50C878;
+        }
+        ul{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            display: inline-block;
+        }
+        .container{
+            max-width: 1100px;
+            width: 80%;
+            margin: 0 auto;
+        }
+        img{
+            max-width: 100%;
+        }
+        .section-margin{
+            margin: 5rem 0;
+        }
+        /* common styles */
+        .logo-nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 0;
+        }
+        .nav-group{
+            display: flex;
+            align-items: center;
+        }
+        .nav-group li{
+            padding-right: 1rem;
+        }
+        .register{
+            background: yellow;
+            padding: 10px 15px;
+            border-radius: 20px;
+            margin-right: 1rem;
+        }
+        .nav-group li a{
+            font-size: 20px;
+            color: #000;
+        }
+        .logo p{
+            font-weight: 700;
+            font-size: 30px;
+        }
+        .image-bg{
+            background-image: url(images/newTwo.png);
+            min-height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .wallet, .subscribe{
+            background-color: var(--green);
+            padding: 15px 18px;
+            color: White;
+        }
+        .wallet{
+            margin-bottom: 2rem;
+            max-width: 400px;
+        }
+        .one-font{
+            font-size: 20px;
+        }
+        .subscribe button{
+            background-color: var(--green);
+            outline: none;
+            border: none;
+            color: White;
+            font-size: 20px;
+            padding: 0.25rem 2rem;
+            cursor: pointer;
+        }
+        .description{
+            margin-bottom: 2rem;
+        }
+
+        /* footer section */
+        .footer-section{
+            background-color: var(--green);
+            padding: 3rem 0;
+            color: #fff;
+            font-size: 18px;
+        }
+        .footer-wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+        .Project-name{
+            align-self: center;
+        }
+        .footer-heading{
+            font-size: 25px;
+            color: yellow;
+            font-weight: 600;
+        }
+        .footer-items li, .footer-heading{
+            margin-bottom: 1rem;
+        }
+        /* newsletter */
+        .newsletter{
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+            gap: 2rem;
+            align-items: center;
+        }
+        .tick-box{
+            width: 15px;
+            height: 15px;
+            background-color: #D3D3D3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="logo-nav">
+                <div class="logo">
+                    <p>Share Wallet</p>
+                </div>
+    
+                <ul class="nav-group">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Activities.html">Activities</a></li>
+                    <li><a href="expenses.html">Expenses</a></li>       
+                    <li class="register"><a href="signup.html">Register Now</a></li>
+                    <li><a href="signIn.html">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="image-bg">
+    </section>
+
+    <div class="welcome-section section-margin">
+        <div class="container">
+           <div class="wrapper">
+                <div class="wallet">
+                    <p class="one-font">Welcome to Share Wallet</p>
+                </div>
+        
+                <div class="description">
+                    <p class="one-font">You paid for a hotel, Maggie covered the fuel costs and <br> David did some shopping. Share Wallet does the math for you</p>
+                </div>
+        
+                <div class="subscribe">
+                    <button>Next</button>
+                </div>
+
+                <div class="newsletter">
+                    <div class="tick-box"></div>
+                    <p class="one-font">Subscribe to our newsletter</p> 
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="">
+                    <h3 class="footer-heading">Links</h3>
+                    <ul class="footer-items">
+                        <li>About Us</li>
+                        <li>Services</li>
+                        <li>Projects</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+
+                <div class="Project-name">
+                    <p>Share Wallet</p>
+                </div>
+
+                <div class="contacts">
+                    <div>
+                        <h3 class="footer-heading">Contacts</h3>
+                    </div>
+                    <div>
+                        <ul class="footer-items">
+                            <li>email@gmail.com</li>
+                            <li>+25476535534</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    
+</body>
+</html>
